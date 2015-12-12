@@ -24,7 +24,16 @@ int fib2(int n)
 }
 int main(int argc, char ** argv) 
 {
-	printf("%d\n", fib2(6));
-	return 0;
+	if (argv[1] == NULL)
+	{
+		printf("Invalid input\n");
+		printf("Must specify an integer argument\n");
+		return 0;
+	}
+	else
+	{
+		printf("%d\n", fib2(atoi(argv[1])));
+		return 0;
+	}
 }
 
